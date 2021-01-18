@@ -34,12 +34,6 @@ namespace IhsMarkitEval.Pages
             }
         }
 
-        public string GetOutputWindowText()
-        {
-            IWebElement outputWindow = Driver.FindElement(OutputWindowLocator);
-            return outputWindow.Text;
-        }
-
         public bool VerifyOutputWindowText(string desiredText, int timeoutSec = 5)
         {
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeoutSec));
